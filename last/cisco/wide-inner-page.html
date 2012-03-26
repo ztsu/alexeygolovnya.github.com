@@ -1,0 +1,371 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>cisco.tusur.ru</title>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="cisco.css" type="text/css" /> 
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="jquery/jcarousellite_1.0.1.min.js"></script>
+</head>
+<body>
+
+	<script type="text/javascript">
+		$(function() {
+			$(document).ready(function(){
+				$('.order-button a').click(function(){
+					$('#form-wrapper').height($(document).height());
+					$('#form-wrapper').fadeIn(150);
+					if (this.hash.replace(/#/g, '')){
+						$('#order-form select[name=course] option[value=' + this.hash.replace(/#/g, '') + ']').attr('selected', true);
+					}
+					return false;
+				});
+			
+				$('#order-form input.close').click(function(){
+					$('#form-wrapper').fadeOut(150);
+				});
+				
+				$('#form-wrapper').click(function(event){
+					if (event.target == this){
+						$(this).fadeOut(150);
+					}
+				});
+			});
+		});
+	</script>
+	
+	<div id="wrapper">
+		<div id="header">
+			<a href="index.html" class="logo" title="Локальная сетевая академия CISCO Томского государственного университета систем управления и радиоэлектроники" ></a>
+			<div class="contacts">
+				<div class="phone"><span class="phone-code">3822</span>&nbsp; 70-17-36</div>
+				<div class="address">ТОМСК, УЛ. КРАСНОАРМЕЙСКАЯ 147, ОФ. 105</div>
+			</div>
+		</div>
+		
+		<div id="page" class="wide">
+			<div class="top">
+				<ul class="crumbs">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="inner.html">Обучение и сертификация</a></li>
+					<li class="without-link">CCNA Exploration</li>
+					<li class="order-button"><a href="/order/#ccent">Заявка на обучение _</a></li>
+				</ul>
+			</div>
+			<div class="middle">
+				<div class="left">
+					<ul class="menu">
+						<li>
+							<a href="inner.html">Обучение и сертификация</a>
+							<ul>
+								<li><a href="inner.html">Форма обучения</a></li>
+								<li>CCNA Exploration</li>
+								<li><a href="inner.html">CCNA Discovery</a></li>
+								<li><a href="inner.html">CCNA Security</a></li>
+								<li><a href="inner.html">CCNET</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="inner.html">Учебные курсы</a>
+						</li>
+						<li>
+							<a href="inner.html">Академия CISCO ТУСУРа</a>
+						</li>
+						<li>
+							<a href="inner.html">Предложения</a>
+						</li>
+						<li>
+							<a href="inner.html">FAQ</a>
+						</li>
+						<li>
+							<a href="inner.html">Форум</a>
+						</li>
+					</ul>
+					<h1>Курс CCNA Exploration</h1>
+					<div class="course-banner">
+						<img src="images/slide-04.jpg"/>
+						<div class="corners"></div>
+					</div>
+					
+				</div>
+				<div class="page">
+
+					<ul class="course-brief">
+						<li class="timeline">
+							<h3>Продолжительность курса</h3>
+							<h4>Учебная программа</h4>
+							<p class="time"><span class="hours">280</span><br/>часов</p>
+							<h4>Продолжительность обучения</h4>
+							<p class="period"><span class="months">5&ndash;6</span><br/>месяцев</p>
+						</li>
+						<li class="exam-n-form">
+							<h3>Подготовка к экзамену</h3>
+							<p class="exam">CISCO 640-802 CCNA</p>
+							<h3>Форма обучения</h3>
+							<ul class="form">
+								<li>Очная</li>
+								<li>Заочная</li>
+							</ul>
+						</li>
+						<li class="docs">
+							<h3>Документы об окончании</h3>
+							<p class="certs"><span>4 сертификата</span><br/>компании CISCO</p>
+							<p class="docs"><span>Свидетельство</span><br/>о повышении квалификации государственного образца</p>
+							<p class="discount"><span>50% скидка</span><br/>на сдачу квалификационноо экзамена CCNA</p>
+						</li>
+					</ul>
+
+					<div class="three-columns">
+						<div class="wide">
+							<h2>Описание курса</h2>
+							<p>Курс проводится на базе локальной сетевой академии Cisco ТУСУРа. Курс обеспечивает фундаментальную подготовку слушателей в области теории и практики проектирования, строительства и технического сопровождения локальных и глобальных сетей с использованием общепризнанных мировых стандартов и решений. Программ курса позволяет слушателям подготовиться к сдаче отраслевого экзамена 640-802 (ССNA) для получения международной квалификации Cisco уровня CCNA (Cisco Certified Network Associate).</p>
+							<p>Курс предоставляет  всесторонний обзор сетевых технологий, начиная с основ сетевого взаимодействия, до продвинутых приложений и сервисов. Курс основан на подходе к сети «сверху-вниз» - от приложений до физичесткого взаимодействия устройств. Особое внимание в курсе уделяется теоретическим аспектам и практическому освоению сетевых технологий и протоколов. В то же время, слушателям предоставляется возможность приобретения навыков и практического опыта, необходимого для проектирования, развертывания и поддержки сетей для малого и среднего бизнеса, а так же для сервис-провайдеров и больших корпораций.</p>
+							<p>Курс предлагает глубокую теоретическую подготовку, лабораторные работы, требующие от слушателей применения всех накопленных теоретических знаний, а также детальный обзор существующих протоколов. Курс создан для слушателей с развитыми аналитическими способностями и способностями к решению проблем, а так же для профессионалов, имеющих опыт работы и желающих структурировать знания или приобрести сертификацию.</p>
+							<p>Методическое  обеспечение курса включает в себя встроенные интерактивные и Flash-сценарии, видео, контрольные вопросы, которые помогают закрепить пройденный материал. Так же, курсом предусмотрено применение слушателями программных пакетов таких, как Packet Tracer, NDG NetLab и т.д., позволяющими расширить теоретические знания о сетях путем симуляций и детального анализа сетевой нагрузки.</p>
+							<h3>Рекомендуемая подготовка</h3>
+							<ul>
+								<li>Курс CCNA является базовым и для его изучения не требуется предварительных знаний современных технологий. Каждая предыдущая часть курса является основой для остальных частей.</li>
+								<li>Рекомендуется знание английского языка на уровне, достаточном для понимания технических текстов.</li>
+							</ul>
+						</div>
+						<div class="last">
+							<h2>Изучив курс, Вы научитесь</h2>
+							<ul>
+								<li>Использовать модели сетевых протоколов для объяснения уровней взаимодействия в сетях обмена данными</li>
+								<li>Проектировать, рассчитывать и применять сетевых масок и адресов</li>
+								<li>Строить Ethernet-сети с использованием коммутаторов и маршрутизаторов</li>
+								<li>Использовать кабельную инфраструктуру и сетевой дизайн для соединения устройств</li>
+								<li>Использовать командную строку Cisco IOS для базовой конфигурации и проверки работоспособности коммутаторов и маршрутизаторов</li>
+								<li>Анализировать работу протоколов и сервисов различных уровней</li>
+								<li>Настраивать и проверять состояния интерфейсов маршрутизатора, виды маршрутизации, маршруты по умолчанию</li>
+								<li>Настраивать протокол маршрутизации RIPv1</li>
+								<li>Проектировать и внедрять бесклассовую схему IP-адресации в сети</li>
+								<li>Использовать продвинутые команды конфигурации и применение EIGRP</li>
+								<li>Применять команды конфигурации RIPv2 и проводить оценку бесклассовых обновлений маршрутизации</li>
+								<li>Определять характеристики дистанционно-векторных протоколов маршрутизации и протоколов маршрутизации на основе состояния канала связи</li>
+								<li>Работать с протоколом маршрутизации на основании канала связи OSPF</li>
+								<li>Находить и устранять неисправности на всех сетевых уровнях с использованием моделей уровневого подхода к решению сетевых задач</li>
+								<li>Выполнять настройку коммутаторов, а так же настройку управления с использованием удаленного доступа</li>
+								<li>Настраивать, проверять маршрутизацию между VLAN, VTP, trunk-интерфейсов, RSTP на коммутаторах Cisco, находить и устранять неисправностей в VLA</li>
+								<li>Управлять операционной системой Cisco IOS и конфигурационными файламиОписывать влияние приложений, таких, как видео и голос поверх IP на сеть</li>
+								<li>Настраивать, проверять, устранять неисправности на серверерах DHCP и DNS на маршрутизаторе</li>
+								<li>Настраивать, проверять, устранять неисправности в работе устройств, использующих списки контроля доступа (Access Control Lists)</li>
+								<li>Настраивать и проверять базовую конфигурацию соединения глобальных сетей, последовательного подключения, PPP, FrameRelay между маршрутизаторами</li>
+							</ul>
+						</div>
+					</div><br class="clear"/>					
+					<h2>Программы  курсов по семестрам</h2>
+					<ul class="program semesters">
+						<li>
+							<h3>1 семестр</h3>
+							<h4>Основы компьютерных сетей</h4>
+							<p class="description">Network fundamentals</p>
+							<ol>
+								<li>Обзор сетевых технологий</li>
+								<li>Основы межсетевого взаимодействия</li>
+								<li>Протоколы прикладного уровня</li>
+								<li>Протоколы транспортного уровня</li>
+								<li>Протоколы сетевого уровня</li>
+								<li>Адресация в IPv4</li>
+								<li>Протоколы канального уровня</li>
+								<li>Физический уровень</li>
+								<li>Технология Ethernet</li>
+								<li>Планирование и подготовка спецификации на проект сети</li>
+								<li>Настройка и тестирование в сети</li>
+							</ol>
+						</li>
+						<li>
+							<h3>2 семестр</h3>
+							<h4>Маршрутизация и протоколы</h4>
+							<p class="description">Routing protocols and concepts</p>
+							<ol>
+								<li>Знакомство  с маршрутизаторами Cisco</li>
+								<li>Загрузка и настройка маршрутизатора</li>
+								<li>Динамическая маршрутизация (часть 1)</li>
+								<li>Динамическая маршрутизация (часть 2)</li>
+								<li>Протокол RIP</li>
+								<li>Классовая и безклассовая адресация</li>
+								<li>Протокол RIP версии 2</li>
+								<li>Детальное изучение таблиц маршрутизации</li>
+								<li>Протокол EIGRP</li>
+								<li>Протоколы маршрутизации link-state (состояние каналов)</li>
+								<li>Протокол OSPF</li>
+							</ol>
+						</li>
+						<li>
+							<h3>3 семестр</h3>
+							<h4>Основы коммутации и беспроводных сетей</h4>
+							<p class="description">LAN switching and Wireless</p>
+							<ol>
+								<li>Протокол OSPF</li>
+								<li>Базовая настройка коммутаторов Cisco Catalyst</li>
+								<li>Виртуальные ЛВС (VLANS)</li>
+								<li>Протокол VTP</li>
+								<li>Протокол STP</li>
+								<li>Маршрутизация между VLAN</li>
+								<li>Базовые концепции беспроводных ЛВС (БЛВС)</li>
+							</ol>
+						</li>
+						<li class="last">
+							<h3>4 семестр</h3>
+							<h4>Технологии глобальных сетей</h4>
+							<p class="description">LAN switching and Wireless</p>
+							<ol>
+								<li>Глобальные  сети (WAN)</li>
+								<li>Протокол PPP</li>
+								<li>Технология Frame Relay</li>
+								<li>Сетевая безопасность</li>
+								<li>Списки доступа (Access-Lists)</li>
+								<li>Технологии удалённого доступа</li>
+								<li>Сетевые сервисы</li>
+								<li>Поиск и устранение неисправностей</li>
+							</ol>
+						</li>
+					</ul>
+				</div><br class="clear"/>
+			</div>
+		</div>
+		
+		<div id="footer">
+			<ul class="footer">
+				<li>
+					<p style="font-weight: bold;">Локальная Сетевая Академия CISCO</p>
+					<p>ул. Красноармейская 147, офис 105</p>
+					<p><a href="#">Схема проезда</a></p>
+				</li>
+				<li>
+					<p>Телефон: <span class="phone-code">3822</span> 70-17-16</p>
+					<p>Электронная почта: <a href="mailto; cisco@tusur.ru">cisco@tusur.ru</a></p>
+					<p>Skype: <a href="">cisco_tusur</a></p>
+				</li>
+				<li>
+					<a href="http://fdo.tusur.ru/"><img src="images/fdo-small-icon.png" width="39" height="37" alt="ФДО ТУСУР" /></a>
+					<a href="http://www.tusur.ru/"><img src="images/tusur-small-icon.png" width="39" height="37" alt="ТУСУР" /></a>
+					<a href="http://www.cisco.com/"><img src="images/cisco-small-icon.png" width="39" height="37" alt="CISCO" /></a>
+				</li>
+				<li class="last">
+					<p><input type="text" class="search" /></p>
+					<p><span class="sitemap closed"><a href="/site-map/" class="fast">Карта сайта</a></span></p>
+				</li>
+			</ul>
+			<script type="text/javascript">
+				$(function() {
+					$("span.sitemap a").click(function(){
+						$('#footer ul.sitemap').toggle();
+						if ($('#footer ul.sitemap').is(':visible')){
+							$(this).parent('span').removeClass('closed');
+							$(document).scrollTop($(document).height());
+						} else {
+							$(this).parent('span').addClass('closed');
+						}
+						return false;
+					});
+				});
+			</script>
+			<ul class="sitemap">
+				<li>
+					<h4>Обучение и сертификация</h4>
+					<ul>
+						<li><a href="inner.html">О компании CISCO</a></li>
+						<li><a href="inner.html">Траектория обучения и сертификации</a></li>
+						<li><a href="inner.html">Сетевые академии CISCO</a></li>
+						<li><a href="inner.html">Преимущества и возможности</a></li>
+						<li><a href="inner.html">Сдача сертификационных экзаменов</a></li>
+					</ul>
+				</li>
+				<li>
+					<h4>Учебные курсы</h4>
+					<ul>
+						<li><a href="inner.html">CCNA Exploration</a></li>
+						<li><a href="inner.html">CCNA Discovery</a></li>
+						<li><a href="inner.html">CCNA Security</a></li>
+						<li><a href="inner.html">CCENT</a></li>
+					</ul>
+				</li>
+				<li>
+					<h4>О нас</h4>
+					<ul>
+						<li><a href="inner.html">Формы обучения</a></li>
+						<li><a href="inner.html">Документы об окончании</a></li>
+						<li><a href="inner.html">Инструкторы</a></li>
+						<li><a href="inner.html">Оборудование и инфраструктура</a></li>
+						<li><a href="inner.html">Расписание занятий</a></li>
+						<li><a href="inner.html">Наши выпускники</a></li>
+					</ul>
+				</li>
+				<li class="last">
+					<h4>Наши предложения</h4>
+					<ul>
+						<li><a href="inner.html">Студентам и выпускникам ВУЗов</a></li>
+						<li><a href="inner.html">Специалистам</a></li>
+						<li><a href="inner.html">Организациям и компаниям</a></li>
+						<li><a href="inner.html">Образовательным учреждениям и учебным центрам</a></li>
+						<li><a href="inner.html">Системным интеграторам</a></li>
+						<li><a href="inner.html">Другим академиям CISCO</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="form-wrapper">
+		<div id="order-form">
+			<div class="corners top"></div>
+			<div class="form">
+				<input type="button" class="close" />
+				<h1>Заявка на обучение</h1>
+				<p class="agreement">Информация, полученная через данную форму, будет использоваться только для обратной связи с пользователем, предоставившим ее. Ни при каких обстоятельствах информация, полученная через данную форму, не будет передана третьим лицам.</p>
+				<form action="?send=order">
+					<p>
+						<label>Курс</label>
+						<select name="course"> 
+							<option value='ccna-exploration'>CCNA Exploration</option> 
+							<option value='ccna-discovery'>CCNA Discovery</option> 
+							<option value='ccna-security'>CCNA Security</option> 
+							<option value='ccent'>CCENT</option> 
+						</select>
+					</p>
+					<p>
+						<label>Форма обучения</label>
+					</p>
+					<div>
+						<input type="radio" name="edu-form" value="o" id="edu-form-o" />
+						<label for="edu-form-o" style="margin-right: 70px;">Очная</label>
+						<input type="radio" name="edu-form" value="z" id="edu-form-z" />
+						<label for="edu-form-z">Заочная</label>
+					</div>
+					<p>
+						<label>ФИО</label>
+						<input type="text" name="fio" />
+					</p>
+					<p>
+						<label>Образование</label>
+					</p>
+					<div>
+						<input type="radio" name="education" value="high" id="education-high" />
+						<label for="education-high" style="margin-right: 70px;">Высшее</label>
+						<input type="radio" name="education" value="other" id="education-other" />
+						<label for="education-other">Другое</label>
+					</div>
+					<p>
+						<label>Телефон</label>
+						<input type="text" name="phone" />
+					</p>
+					<p>
+						<label>Почта</label>
+						<input type="text" name="email" />
+					</p>
+					<p>
+						<label>Комментарий</label>
+						<textarea name="comments" cols="41" rows="8"></textarea>
+					</p>
+					<p><input type="submit" value="Подать заявку" /></p>
+				</form>
+			</div>
+			<div class="corners bottom"></div>
+		</div>
+	</div>
+
+</body>
+</html>
+
