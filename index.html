@@ -1,301 +1,123 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-<title>alexeygolovnya</title>
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<style>
-body{
-	background-color: #f3f3f3;
-	font: 14px/20px Arial, Helvetica, sans-serif;
-	margin: 0;
-	padding: 0;
-	}
-body.tomsk a{
-	color: #6c3;
-	}
-body.tomsk a:hover,
-body.tomsk .interests span:hover{
-	color: #fff;
-	background-color: #6c3;
-	}
-body.tomsk .needle:hover{
-	background-image: url('needle-green.png');
-	}
-body.tomsk .needle:hover .locality{
-	background-color: #6c3;
-	}
-body.tomsk #map{
-	margin: -241px 0 0 -443px;
-	}
-a{
-	color: #36c;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	padding: 0 3px;
-	margin-left: -3px;
-	}
-a:hover{
-	background-color: #36c;
-	color: #fff;
-	text-decoration: none;
-	}
-h1{
-	font-size: 2.5em;
-	letter-spacing: -2px;
-	margin-bottom: 0px;
-	text-shadow: #fff 0px 1px 1px;
-	margin-top: 23px;
-	}
-.projects,
-p.contacts{
-	margin-top: 21px;
-	}
-.interests{
-	font-size: 9px;
-	line-height: 14px;
-	margin-top: 28px;
-	}
-.interests span{
-	color: #f6f6f6;
-	background-color: #e3e3e3;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	padding: 0 3px;
-	margin: 0 3px 0 -3px;
-	}
-.interests span:hover{
-	background-color: #36c;
-	color: #fff;
-	cursor: default;
-	}
-.hidden h1,
-.hidden .projects,
-.hidden .country,
-.hidden .contacts,
-.hidden .networks,
-.hidden .interests{
-	visibility: hidden;
-}
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css' />
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>Alexey Golovnya &ndash; Web developer</title>
 
-#card{
-	width: 375px;
-	height: 300px;
-	z-index: 1;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin: -200px 0 0 -225px;
-	display: none;
-	}
+	<style type="text/css">
 
-#map{
-	background-image: url('world-map-small.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	margin: -243px 0 0 -429px;
-	height: 300px;
-	width: 465px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	visibility: hidden;
-	z-index: 0;
-	}
-
-.needle{
-	cursor: pointer;
-	padding-bottom: 7px;
-	}
-.needle:hover{
-	background-image: url('needle-blue.png');
-	background-position: center bottom;
-	background-repeat: no-repeat;
-	}
-.needle:hover .locality{
-	background-color: #36c;
-	color: #fff;
-	text-decoration: none;
-	}
-a,.locality{
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	padding: 0 3px;
-	margin-left: -3px;
-	}
-
-.networks a{
-	margin: 0;
-	text-decoration: none;
-	}
-.networks a:hover{
-	background: none;
-	}
-.networks .twitter{
-	color: #33ccff;
-	font-weight: bold;
-	}
-.networks .github{
-	color: #000;
-	font-weight: bold;
-	}
-.networks .github:hover{
-	color: #3a6aa3;
-	cursor: pointer;
-	}
-.networks .v{
-	background-color: #305e8a !important;
-	color: #fff;
-	font-weight: bold;
-	padding: 0 3px;
-	border-radius: 2px;
-	-moz-border-radius: 2px;
-	-webkit-border-radius: 2px;
-	text-decoration: none;
-	}
-.networks .facebook{
-	background-color: #3b5998 !important;
-	color: #fff;
-	font-weight: bold;
-	padding: 0 3px 0 8px;
-	text-decoration: none;
-	border-radius: 0;
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
-	}
-	
-.legend{
-	float: left;
-	height: 300px;
-	width: 75px;
-	color: #ccc;
-	font-size: 10px;
-	line-height: 10px;
-	list-style-type: none;
-	margin: 0 14px 0 0;
-	padding: 0;
-	text-align: right;
-	}
-.legend .web-developer{
-	margin-top: 36px;
-	visibility: hidden;
-	}
-.legend .location{
-	margin-top: 19px;
-	visibility: hidden;
-	}
-.legend .projects{
-	margin-top: 30px;
-	visibility: hidden;
-	}
-.legend .contacts{
-	margin-top: 31px;
-	visibility: hidden;
-	}
-.legend .networks{
-	margin-top: 44px;
-	visibility: hidden;
-	}
-.legend .tags{
-	margin-top: 33px;
-	visibility: hidden;
-	}
-</style>
-<!--[if lt IE 8]>
-<style type="text/css">
-.legend .projects{
-	margin-top: 36px;
-	}
-.legend .networks{
-	margin-top: 47px;
-	}
-</style>
-<![endif]-->
-
-</head>
-<body class="tomsks">
-	<script type="text/javascript">
-	(function(){
-		window.onload = function(){
-			state = document.body.className;
-			setInterval(checkLocation, 100);
-		};
-		//
-		checkLocation = function(){
-			var hash = location.hash.replace(/#/g, '');
-			if (hash != document.body.className){
-				state = hash;
-				document.body.className = state;
-				switch (state){
-					case 'tomsk':
-						document.getElementById('city').innerHTML = 'Tomsk';
-						break;
-					default:
-						document.getElementById('city').innerHTML = 'Novosibirsk';
-				}
-				document.getElementById('card').style.display = 'block';
-			}
+		* {
+			margin: 0;
+			padding: 0;
+			outline: 0;
 		}
-	})();
-	
-	</script>
-	<div id="map"></div>
-	<div id="card" class="vcard">
-		<ul class="legend">
-			<li class="web-developer" id="legend-web-developer">web developer</li>
-			<li class="location" id="legend-location">location</li>
-			<li class="projects" id="legend-projects">projects</li>
-			<li class="contacts" id="legend-contacts">contacts</li>
-			<li class="networks" id="legend-networks">networks</li>
-			<li class="tags" id="legend-tags">tags</li>
+
+		body {
+			font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+			color: #333;
+			font-size: 10pt;
+			font-weight: 400;
+		}
+
+		a {
+			color: #05C;
+			text-decoration: none;
+			border-bottom: #BBE 1px solid;
+
+		}
+
+		a:hover {
+			color: #2BA77D;
+			border-bottom-color: #B4DFD0;
+		}
+
+		.layout {
+			width: 170px;
+			text-align: right;
+			margin-top: 170px;
+			margin-left: 170px;
+		}
+
+		h1 {
+			font-size: 16pt;
+			font-weight: 600;
+			color: #333;
+			margin-top: 9px;
+		}
+
+		h2 {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 10pt;
+			margin-top: 7px;
+		}
+
+		.location {
+			margin-top: 5px;
+		}
+
+		.photo {
+			display: inline-block;
+			background-color: white;
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+			width: 84px;
+			height: 84px;
+			border: 3px solid white;
+			border-radius: 100%;
+			margin-right: -3px;
+			margin-top: -3px;
+		}
+
+		.photo img {
+			border-radius: 100%;
+		}
+
+		.projects {
+			margin-top: 29px;
+			color: gainsboro;
+		}
+
+		.contacts {
+			margin-top: 29px;
+			list-style-type: none;
+			line-height: 26px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="layout">
+		<span class="photo">
+			<img src="photo.png" width="84" height="84"/>
+		</span>
+
+		<h1>Alexey Golovnya</h1>
+
+		<h2>Web developer</h2>
+
+		<div class="location">Novosibirsk, Russia</div>
+
+		<p class="projects" style="margin-right: -11px;"><a href="http://juxta.ru">Juxta</a>,
+			<a href="http://timery.ru">timery</a>, &hellip;</p>
+
+		<ul class="contacts">
+			<li class="email"><a href="mailto:alexey.golovnya@gmail.com">alexey.golovnya@gmail.com</a></li>
 		</ul>
-		<h1 class="fn" onmouseover="document.getElementById('legend-web-developer').style.visibility = 'visible'; " onmouseout="document.getElementById('legend-web-developer').style.visibility = 'hidden'; ">Alexey Golovnya</h1>
-		<p class="adr">
-			<span class="needle" onmouseover="document.getElementById('map').style.visibility = 'visible'; document.getElementById('card').className = 'vcard hidden';" onmouseout="document.getElementById('map').style.visibility = 'hidden'; document.getElementById('card').className = 'vcard'; "><span class="locality" id="city">Novosibirsk</span></span><span class="country">, <span class="country-name">Russia</span></span></p>
-		<p class="projects" onmouseover="document.getElementById('legend-projects').style.visibility = 'visible';" onmouseout="document.getElementById('legend-projects').style.visibility = 'hidden';"><a href="http://juxta.ru/">Juxta</a></p>
-		<p class="contacts" onmouseover="document.getElementById('legend-contacts').style.visibility = 'visible';" onmouseout="document.getElementById('legend-contacts').style.visibility = 'hidden';"><a href="mailto:alexey.golovnya@gmail.com" class="email">alexey.golovnya@gmail.com</a><br/>+7 923 144 45 05</p>
-		<p class="networks" onmouseover="document.getElementById('legend-networks').style.visibility = 'visible';" onmouseout="document.getElementById('legend-networks').style.visibility = 'hidden';">
-			<a href="http://twitter.com/algolovnya" class="twitter">t</a>&nbsp;
-			<a href="http://vkontakte.ru/id196337" class="v">В</a>&nbsp;
-			<a href="http://www.facebook.com/profile.php?id=1438697316" class="facebook">f</a>&nbsp;
-			<a href="http://github.com/alexeygolovnya" class="github" >github</a>
-		</p>
-		<p class="interests">
-			<span>PHP</span>
-			<span>JavaScript</span>
-			<span>jQuery</span>
-			<span>HTML</span>
-			<span>CSS</span><br/>
-			<span>Git</span>
-			<span>MySQL</span>
-			<span>Subversion</span>
-			<span>github</span>
-			<span>Prototype.js</span><br/>
-			<span>Python</span>
-			<span>HTML5</span>
-			<span>XML</span>
-			<span>XPath</span>
-			<span>XSLT</span><br/>
-			<span>Ajax</span>
-			<span>SQL</span>
-			<span>Ubuntu</span>
-			<span>bash</span>
-		</p>
 	</div>
-<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-4345590-10']);
-  _gaq.push(['_trackPageview']);
+	<script type="text/javascript">
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-4345590-10']);
+		_gaq.push(['_trackPageview']);
 
-</script>
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+	</script>
 </body>
 </html>
